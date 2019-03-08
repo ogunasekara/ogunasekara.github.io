@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oshadha Gunasekara</title>
-    <link>http://osguus.github.io/</link>
+    <link>https://osguus.github.io/</link>
     <description>Recent content on Oshadha Gunasekara</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Nov 2016 18:25:22 +0530</lastBuildDate>
     
-	<atom:link href="http://osguus.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://osguus.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Atlas Project</title>
-      <link>http://osguus.github.io/post/work1/</link>
+      <link>https://osguus.github.io/post/work1/</link>
       <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
       
-      <guid>http://osguus.github.io/post/work1/</guid>
+      <guid>https://osguus.github.io/post/work1/</guid>
       <description>&lt;p&gt;Unique to Carnegie Mellon University, buggy is a competition where Greek and independent organizations race with their buggies, small, low, aerodynamic vehicles, powered only by gravity and human pushers. Traditionally, students are recruited to drive these on the course. In the Atlas Project, our goal to make a buggy that can drive itself around the course using only the limited knowledge we can get from our sensors.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Home Surveillance Assistant (HSA)</title>
-      <link>http://osguus.github.io/post/work2/</link>
+      <link>https://osguus.github.io/post/work2/</link>
       <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
       
-      <guid>http://osguus.github.io/post/work2/</guid>
+      <guid>https://osguus.github.io/post/work2/</guid>
       <description>&lt;p&gt;HSA is a personal project of mine, sprung up initially through the boredom of not having anything to do while at home for winter break. The goal was to make a two wheel differential drive robot using only off the shelf components that could be controlled and visualized remotely.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Resumes</title>
-      <link>http://osguus.github.io/resumes/</link>
+      <link>https://osguus.github.io/resumes/</link>
       <pubDate>Sun, 06 Nov 2016 13:00:25 +0530</pubDate>
       
-      <guid>http://osguus.github.io/resumes/</guid>
+      <guid>https://osguus.github.io/resumes/</guid>
       <description>I&amp;rsquo;ve created two targeted resumes: one for robotics and one for ECE. I&amp;rsquo;ve linked both of those below:
  ECE Resume Robotics Resume  </description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>http://osguus.github.io/about/</link>
+      <link>https://osguus.github.io/about/</link>
       <pubDate>Sat, 05 Nov 2016 21:05:33 +0530</pubDate>
       
-      <guid>http://osguus.github.io/about/</guid>
+      <guid>https://osguus.github.io/about/</guid>
       <description>I&amp;rsquo;m Oshadha Gunasekara, a third year student at Carnegie Mellon University. Currently, I am working towards a double major in both Electrical &amp;amp; Computer Engineering (ECE) and Robotics.
 Ever since high school, I&amp;rsquo;ve been interested in making and learning how the world works around us. That led me to discover the vast and interesting world of Engineering. From there on, I&amp;rsquo;ve come to learn how to design and build my own devices that do what I want them to do.</description>
     </item>

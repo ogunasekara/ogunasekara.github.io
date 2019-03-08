@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Oshadha Gunasekara</title>
-    <link>http://osguus.github.io/categories/</link>
+    <link>https://osguus.github.io/categories/</link>
     <description>Recent content in Categories on Oshadha Gunasekara</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://osguus.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://osguus.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Projects</title>
-      <link>http://osguus.github.io/categories/projects/</link>
+      <link>https://osguus.github.io/categories/projects/</link>
       <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
       
-      <guid>http://osguus.github.io/categories/projects/</guid>
+      <guid>https://osguus.github.io/categories/projects/</guid>
       <description></description>
     </item>
     
