@@ -6,7 +6,7 @@ markdown: kramdown
 highlighter: rouge
 logo: false
 paginate: 15
-baseurl: /
+baseurl: ""
 domain_name: "https://osguus.github.io/"
 google_analytics: "UA-XXXXXXXX-X"
 plugins: [jekyll-paginate]
