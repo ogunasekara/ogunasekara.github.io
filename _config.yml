@@ -1,0 +1,22 @@
+name: Oshadha Gunasekara
+description: Developer. Roboticist. Hacker.
+meta_description: "Oshadha Gunasekara Portfolio Site"
+
+markdown: kramdown
+highlighter: rouge
+logo: false
+paginate: 15
+baseurl: /
+domain_name: "https://osguus.github.io/"
+google_analytics: "UA-XXXXXXXX-X"
+plugins: [jekyll-paginate]
+
+# Details for the RSS feed generator
+url: ""
+author: "Oshadha Gunasekara"
+
+# Disqus config
+disqus-shortname: ""
+
+# port config
+port: 4444
