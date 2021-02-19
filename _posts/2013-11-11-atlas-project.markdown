@@ -1,11 +1,12 @@
 ---
 layout: post
 title:  "The Atlas Project"
-date:   2013-11-10 10:18:00
+date:   2013-11-11 10:18:00
 categories: Project
 ---
 
 Unique to Carnegie Mellon University, buggy is a competition where Greek and independent organizations race with their buggies, small, low, aerodynamic vehicles, powered only by gravity and human pushers. Traditionally, students are recruited to drive these on the course. In the Atlas Project, our goal to make a buggy that can drive itself around the course using only the limited knowledge we can get from our sensors.
+
 <!--more-->
 
 The project had grown significantly from its origins as a crazy idea fulfilled by two enthusiastic roommates, now garnering a small following. I was not one of the founders of this project; I joined two years after its founding, a freshman looking for a way to make a mark on campus. From then on, I worked my way up, becoming the president of the project and leading it to its recognition as a student organization.
@@ -118,4 +119,4 @@ DuneBuggy is our newest autonomous platform. Currently, it is still under constr
 
 ## Resources
 
-All the software for this project can be found in our [GitHub Organization](https://github.com/AtlasBuggy).
+All the software for this project can be found in our [GitHub Organization](https://github.com/AtlasBuggy){:target="_blank"}.
