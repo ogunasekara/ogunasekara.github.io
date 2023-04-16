@@ -523,6 +523,11 @@ margin on the iframe, cause it breaks stuff. */
     animation: none;
 }
 
+/* Prevent scrolling on home template */
+.home-template {
+    overflow: hidden;
+}
+
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
    on photos which happen to have a light background. */
 .home-template .main-header:after {
@@ -717,17 +722,17 @@ margin on the iframe, cause it breaks stuff. */
 .post {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    max-width: 1000px;
     margin: 4rem auto;
     padding-bottom: 4rem;
-    border-bottom: #EBF2F6 1px solid;
+    /* border-bottom: #EBF2F6 1px solid; */
     word-break: break-word;
     hyphens: auto;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
-.post:after {
+/* .post:after {
     display: block;
     content: "";
     width: 7px;
@@ -742,7 +747,7 @@ margin on the iframe, cause it breaks stuff. */
     -moz-border-radius: 100%;
     border-radius: 100%;
     box-shadow: #FFF 0 0 0 5px;
-}
+} */
 
 body:not(.post-template) .post-title {
     font-size: 3.6rem;
@@ -894,7 +899,6 @@ body:not(.post-template) .post-title {
 /* Break out larger images to be wider than the main text column
    the class is applied with jQuery */
 .post-content .full-img {
-    width: 126%;
     max-width: none;
     margin: 0 -13%;
 }
@@ -1541,8 +1545,8 @@ body:not(.post-template) .post-title {
         width: auto;
         margin-top: 2rem;
         margin-bottom: 2rem;
-        margin-left: 16px;
-        margin-right: 16px;
+        margin-left: 30px;
+        margin-right: 30px;
         padding-bottom: 2rem;
         line-height: 1.65em;
     }

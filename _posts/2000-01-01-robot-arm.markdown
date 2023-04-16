@@ -1,0 +1,23 @@
+---
+layout: project
+title: "Robot Arm"
+picture-url: "/assets/images/robotarm/robot-arm-picture.jpeg"
+type: "project"
+publish: yes
+---
+
+The first robot I developed and the start of my fascination with robotics, this robot arm was my two-person team's submission for the Robot Arm event during Arizona's Science Olympiad in 2016. Knowing nothing about power and only rudimentary Arduino syntax, we developed a robot arm with cardboard, skewers, cheap servos, potentiometers, and a very large number of AA batteries. 
+
+<!--more-->
+
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/TJCXTsTXtJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Due to our inexperience with mechanical methods, our arm was constructed with what we had lying around at the time - cardboard. After purchasing some servos and finding a Vex gripper that a teacher had lying around, we attached the servos to the cardboard using scavenged nuts and bolts and a hefty amount of duct tape for reinforcement. 
+
+However, as we began to test the arm, we quickly realized that the cardboard was in fact far too weak to support the weight of the servos and the gripper. To account for this, we added a second servo to the shoulder joint and reinforced the cardboard using horizontal skewers, layering the cardboard, and putting skewers through the perforated part of the cardboard. This seemed to strengthen the structure a little, but the arm's fragility still remained.
+
+The robot arm was controlled by a mimic controller, utilizing a small replica of the arm made of skewers and potentiometers. These potentiometers were read by an Arduino, which took the values read by sensors and sent the appropriate commands to the servo motors through the Arduino's PWM functionality.
+
+Although this method of control worked in theory, the arm had issues reaching points closer to the edge of its workspace. This was a result of our power strategy. Our Arduino was powered by a 9V battery plugged directly into the board. The servos, on the otherhand, received an external source of battery in the form of 4 AA batteries, as we were unsure how else to power this device at the time. This resulted in us going through a lot of batteries.. 😅
+
+We put in a lot of effort and during the event we got 2nd place! Honestly, we were pretty surprised because it seemed that a lot of teams had purchased robot arm kits from amazon and made very small adjustments in order to complete the event. I'm glad we went all out and made it though, since it gave me an idea of what robotics was like.

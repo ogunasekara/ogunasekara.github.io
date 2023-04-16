@@ -1,0 +1,60 @@
+---
+layout: project
+title: "HSA"
+picture-url: "/assets/images/hsa/hsa-picture.jpg"
+type: "project"
+publish: yes
+---
+
+HSA (Home Surveillance Assistant) is a personal project of mine, sprung up initially through the boredom of not having anything to do while at home for winter break. The goal was to make a two wheel differential drive robot using only off the shelf components that could be controlled and visualized remotely.
+
+<!--more-->
+
+Currently, HSA has gone through one major iteration. The first iteration of HSA included the following:
+
+* 2 NeveRest Classic 40 Gearmotors
+* 1 L298 Dual Motor Driver
+* 1 TalentCell 12V 6000mAh DC Battery Pack
+* 1 Raspberry Pi 3
+* 1 Arduino Uno
+* 1 Raspberry Pi Camera
+
+The chassis for the robot was designed to be made with MDF, in the shape of a box. The two actuated wheels would be supported by a single caster on the opposite side of the box. Since we did not have any power tools, the chassis was cut using handsaws and assembled with screws and wood glue. To get a higher vantage point, I planned to have the camera attached on top of a long PVC pipe. This pipe attached to the base of the chassis. Further, an acrylic sheet was placed on top of the bottom box, secured with magnets.
+
+<figure class="image"><img src="{{'/assets/images/hsa/hsa12.jpg' | relative_url}}"></figure>
+
+Initially, I planned to power the gearmotors with the 12V from the TalentCell and control them with the L298 driver. After wiring up this setup and testing, I realized that I had made a large mistake. The gearmotors I had bought had a stall current of around 11 A, while the battery pack could only support 2 A. Further, the L298 driver could only handle constant 2 A combined from both ports. This lack of power led to an inability to properly control the speed of the motors.
+
+Nevertheless, I pushed forward in the development of HSA. At this point, I was not very familiar in ROS. As a result, I used a ROS-clone that the founder of the Atlas Project had written, called Atlasbuggy. Using this proprietary backend, I was able to write software to control the actuators as well as broadcast video from the Pi Camera.
+
+I created a multi-platform application using the [Ionic Framework](https://ionicframework.com/), allowing me to communicate with HSA through HTTP requests. Through this, I was able to create a mobile application to control the robot's and camera's movement while seeing the camera view. The following is an example of how it worked:
+
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/Y1jixg0DsWU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+## HSA 2
+
+The next time I was home for break, I decided to improve upon the first HSA. For this iteration, I decided to use a 3S LiPo battery to power the robot and two Cytron 13A DC motor drivers. The new design had a circular design and had two caster wheels instead of one for further stability.
+
+<figure class="image"><img src="{{'/assets/images/hsa/hsa2.jpg' | relative_url}}"></figure>
+
+With these motor drivers, I am able to properly control the speed of the motors. Further, I purchased encoder wires for the attached motor encoders. With these motor encoders, I am able to get the position of the wheels.
+
+Using the encoder data, I wrote a simple velocity calculator utilizing a first order filter. An explanation of this method is shown below:
+<br>
+
+```python
+# new_vel is calculated from encoder vals and time
+# cur_vel is current calculated velocity
+
+K = 0.1
+
+err = new_vel - cur_vel
+cur_vel = cur_vel + err * K
+```
+<br>
+Above, we can see that the velocity estimate converges to the actual velocity depending on the value of K. The lower the value of K, the system is better at getting rid of noise but worse at converging. The higher the value of K, the system is faster at converging but worse at handling noise. By tuning this constant, we get a decent velocity estimate from the wheels.
+
+By using this velocity estimate, we can develop a feedback velocity controller for the wheels, allowing us to precisely control the velocity of each wheel.
+
+The software of HSA 2 is still under development, but I will update this page when more progress is made.

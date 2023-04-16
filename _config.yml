@@ -9,7 +9,7 @@ paginate: 15
 baseurl: ""
 domain_name: "https://ogunasekara.github.io/"
 google_analytics: "UA-XXXXXXXX-X"
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-sass-converter]
 
 # Details for the RSS feed generator
 url: ""
