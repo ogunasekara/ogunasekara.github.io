@@ -31,14 +31,14 @@
 
 <body class="{% if page.home_page %}home-template{% endif %}">
     <!-- Navbar -->
-    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-light is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="websiteNavbar">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
         <div id="websiteNavbar" class="navbar-menu">
-            <div class="navbar-end" style="margin-top: 20px; margin-bottom: 20px; margin-right: 20px;">
+            <div class="navbar-end">
                 <a class="navbar-item" href="{{'/' | relative_url }}">Home</a>
                 <a class="navbar-item" href="{{'/pages/projects' | relative_url}}">Projects</a>
                 <a class="navbar-item" href="{{'/pages/blog' | relative_url}}">Blog</a>
