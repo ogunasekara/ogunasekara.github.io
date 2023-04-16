@@ -114,7 +114,6 @@ We fed this dead reckoned estimate into a ROS package known as [gmapping](http:/
 
 We are currently working on the controller for BabyBuggy. We plan to roll BabyBuggy again during the 2019 Sweepstakes (Buggy) competition.
 
-<!-- ![Generated Map](/assets/images/atlasproject/map.png) -->
 <figure class="image"><img src="{{'/assets/images/atlasproject/map.png' | relative_url}}"></figure>
 
 ## DuneBuggy

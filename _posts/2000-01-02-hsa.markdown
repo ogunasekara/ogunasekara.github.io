@@ -29,8 +29,9 @@ Nevertheless, I pushed forward in the development of HSA. At this point, I was n
 
 I created a multi-platform application using the [Ionic Framework](https://ionicframework.com/), allowing me to communicate with HSA through HTTP requests. Through this, I was able to create a mobile application to control the robot's and camera's movement while seeing the camera view. The following is an example of how it worked:
 
-<iframe width="1920" height="1080" src="https://www.youtube.com/embed/Y1jixg0DsWU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<div style="position: relative; width: 100%; padding-bottom: 75%;">
+    <iframe style="position: absolute" width="100%" height="100%" src="https://www.youtube.com/embed/Y1jixg0DsWU" allowfullscreen></iframe>
+</div>
 
 ## HSA 2
 
