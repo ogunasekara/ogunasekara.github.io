@@ -57,4 +57,6 @@ Above, we can see that the velocity estimate converges to the actual velocity de
 
 By using this velocity estimate, we can develop a feedback velocity controller for the wheels, allowing us to precisely control the velocity of each wheel.
 
-The software of HSA 2 is still under development, but I will update this page when more progress is made.
+## Resources
+
+The software and resources for this project can be found in the [HSA1 repository](https://github.com/ogunasekara/HSA1) and the [HSA2 repository](https://github.com/ogunasekara/HSA2).
