@@ -13,7 +13,7 @@ Unique to Carnegie Mellon University, buggy is a competition where Greek and ind
 The project had grown significantly from its origins as a crazy idea fulfilled by two enthusiastic roommates, now garnering a small following. I was not one of the founders of this project; I joined two years after its founding, a freshman looking for a way to make a mark on campus. From then on, I worked my way up, becoming the president of the project and leading it to its recognition as a student organization.
 
 ## RoboQuasar
-<figure class="image"><img src="{{'/assets/images/atlasproject/quasar2.jpg' | relative_url}}"></figure>
+<figure class="image"><img src="{{'/assets/images/atlasproject/quasar.jpg' | relative_url}}"></figure>
 
 When I joined the project, work was taking place to retrofit Quasar, an old aluminum frame and shell buggy built to race in 2002, into an autonomous platform (now known as RoboQuasar). I was still new to the project, so I spent this year starting to learn about the ins and outs of robotics programming.
 
@@ -53,7 +53,7 @@ This method of controller and estimator worked **sometimes**. However, it was ve
 
 ## BabyBuggy
 
-<figure class="image"><img src="{{'/assets/images/atlasproject/babybuggy1.jpg' | relative_url}}"></figure>
+<figure class="image"><img src="{{'/assets/images/atlasproject/babybuggy.jpg' | relative_url}}"></figure>
 
 The following year, in 2017, after our experience with RoboQuasar, we came to the conclusion that we did not have enough sensors to properly localize and control the buggy. Again, due to lack of significant funding, we decided to retrofit. This time, however, we came across a baby stroller in a Massachusetts junkyard. We also came across a LIDAR being sold on eBay for $800, a solid deal for us! So, in the end, the aptly named BabyBuggy was built with the following:
 
