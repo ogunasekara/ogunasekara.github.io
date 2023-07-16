@@ -44,11 +44,11 @@ From prior designs, we noted two popular end effector designs: a granular jammer
 
 To localize and map the robot in it's fixed space, we utilized two primary sources of information: wheel odometry and 2D LIDAR scans. The odometry data was calculated from the Hebi actuators we were using as our wheels while the 2D LIDAR is received from an RPLIDAR A1 mounted to the chassis. 
 
-Since we used ROS as our robotics backend, we were able to utilize the large repository of mapping/localization packages others have created. To create the map, we utilized <a>gmapping</a>. This allowed us to generate an occupancy grid of our space utilizing a Rao-Blackwellized particle filter based SLAM implementation.
+Since we used ROS as our robotics backend, we were able to utilize the large repository of mapping/localization packages others have created. To create the map, we utilized <a href="http://wiki.ros.org/gmapping" target="_blank">gmapping</a>. This allowed us to generate an occupancy grid of our space utilizing a Rao-Blackwellized particle filter based SLAM implementation.
 
 <figure><img src="{{'/assets/images/robodutchman/mapping.jpg' | relative_url}}"></figure>
 
-To localize within this map, we utilized <a>AMCL</a>, an adaptive particle filter, to localize the robot given the robot's odometry estimate and 2D LIDAR scans.
+To localize within this map, we utilized <a href="http://wiki.ros.org/amcl" target="_blank">AMCL</a>, an adaptive particle filter, to localize the robot given the robot's odometry estimate and 2D LIDAR scans.
 
 <figure><img src="{{'/assets/images/robodutchman/amcl.jpg' | relative_url}}"></figure>
 
