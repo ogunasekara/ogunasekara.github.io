@@ -4,14 +4,14 @@ title: Projects
 ---
 
 <main>
-    <div style="display: grid; grid-template-columns: auto auto;">
+    <div style="display: flex; flex-wrap: wrap; grid-template-columns: auto auto;">
         {% for post in site.posts %}
         {% if post.publish and post.type == "project" %}
-        <div style="padding: 10px;">
-            <h2 style="margin-top: 1.125rem">{{ post.title }}</h2>
+        <div style="padding: 10px; flex-grow: 1;">
+            <h2 style="margin-top: 0">{{ post.title }}</h2>
             <figure>
                 <a href="{{ post.url | relative_url }}">
-                    <img src="{{ post.picture-url | relative_url }}" style="height: 300px; box-shadow: 0 30px 40px rgba(0,0,0,.1); border-radius: 20px;"></img>
+                    <img src="{{ post.picture-url | relative_url }}" style="height: 300px; width: 100%; object-fit: cover; box-shadow: 0 30px 40px rgba(0,0,0,.1); border-radius: 20px;"></img>
                 </a>
                 
                 <!-- <figcaption>{{ post.title }}</figcaption> -->
