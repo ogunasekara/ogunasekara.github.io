@@ -4,10 +4,10 @@ title: Projects
 ---
 
 <main>
-    <div style="display: flex; flex-wrap: wrap; grid-template-columns: auto auto;">
+    <div style="display: grid; grid-template-columns: auto;">
         {% for post in site.posts %}
         {% if post.publish and post.type == "project" %}
-        <div style="padding: 10px; flex-grow: 1;">
+        <div style="padding: 10px;">
             <h2 style="margin-top: 0">{{ post.title }}</h2>
             <figure>
                 <a href="{{ post.url | relative_url }}">
