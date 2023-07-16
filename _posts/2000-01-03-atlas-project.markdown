@@ -76,7 +76,7 @@ In 2018, however, we began to get a better idea of how to approach this problem.
 From our experience in 2016, we realized that purely GPS-based localization would cause issues on the course, so we were more focused on the Dead Reckoning solutions. In the end, we were able to make a simple velocity estimator with the encoders by utilizing a first order filter. Using this velocity estimate and a relative yaw, pitch, and roll from the IMU, we could systematically estimate our position and orientation in 3D by doing the following update (pulled directly from our dead reckoning code):
 <br>
 
-```python
+<pre><code class="language-python">
 yawMatrix = np.matrix([
             [math.cos(yaw), -math.sin(yaw), 0],
             [math.sin(yaw), math.cos(yaw), 0],
@@ -107,8 +107,7 @@ prev_time = cur_time
 state[0] = state[0] + transf_vel[0,0]*dt
 state[1] = state[1] + transf_vel[1,0]*dt
 state[2] = state[2] + transf_vel[2,0]*dt
-```
-<br>
+</code></pre>
 
 We fed this dead reckoned estimate into a ROS package known as [gmapping](http://wiki.ros.org/gmapping){:target="_blank"}. With a lot of tuning, we were able to get a decent map of the course. However, this map still has some loop closure issues, likely caused by lack of sufficient data. We are working on making a better map with clearer features.
 

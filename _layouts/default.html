@@ -11,11 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="{{'/assets/css/screen.css' | relative_url}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="{{'/assets/sass/main.scss' | relative_url}} " />
-    <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.6.0.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
@@ -30,28 +27,37 @@
 </head>
 
 <body class="{% if page.home_page %}home-template{% endif %}">
-    <!-- Navbar -->
-    <nav class="navbar is-light is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="websiteNavbar">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-        <div id="websiteNavbar" class="navbar-menu">
-            <div class="navbar-end">
-                <a class="navbar-item" href="{{'/' | relative_url }}">Home</a>
-                <a class="navbar-item" href="{{'/pages/projects' | relative_url}}">Projects</a>
-                <a class="navbar-item" href="{{'/pages/blog' | relative_url}}">Blog</a>
-                <a class="navbar-item" href="{{'/pages/about' | relative_url}}">About</a>
-            </div>
-        </div>
-    </nav>
+    <section>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{{'/' | relative_url }}">home</a></li>
+                    <li><a href="{{'/pages/projects' | relative_url}}">projects</a></li>
+                    <!-- <li><a href="{{'/pages/blog' | relative_url}}">blog</a></li> -->
+                    <li><a href="{{'/assets/resume.pdf' | relative_url}}">resume</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    {{ content }}
+        <article>
+            {{ content }}
+        </article>
 
-    <script type="text/javascript" src="{{'/assets/js/jquery-1.11.1.min.js' | relative_url}}"></script>
-    <script type="text/javascript" src="{{'/assets/js/jquery.fitvids.js' | relative_url }}"></script>
-    <script type="text/javascript" src="{{'/assets/js/bulma.js' | relative_url }}"></script>
-    <script type="text/javascript" src="{{'/assets/js/index.js' | relative_url }}"></script>
+        <footer>
+            <nav>
+                © 2023 Oshadha Gunasekara
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/ogunasekara" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/oshadhagunasekara/" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:oshadha123@gmail.com">Email</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </section>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>

@@ -12,3 +12,14 @@
 @import
 	"syntax"
 ;
+
+.navbar .navbar-brand {
+	text-align: center;
+	display: block;
+	width: 80%;
+  }
+  
+  .navbar .navbar-brand > .navbar-item,
+  .navbar .navbar-brand .navbar-link {
+	display: inline-block;
+  }

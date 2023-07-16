@@ -44,15 +44,16 @@ With these motor drivers, I am able to properly control the speed of the motors.
 Using the encoder data, I wrote a simple velocity calculator utilizing a first order filter. An explanation of this method is shown below:
 <br>
 
-```python
-# new_vel is calculated from encoder vals and time
-# cur_vel is current calculated velocity
+<pre><code class="language-python">
+    # new_vel is calculated from encoder vals and time
+    # cur_vel is current calculated velocity
 
-K = 0.1
+    K = 0.1
 
-err = new_vel - cur_vel
-cur_vel = cur_vel + err * K
-```
+    err = new_vel - cur_vel
+    cur_vel = cur_vel + err * K
+</code></pre>
+
 <br>
 Above, we can see that the velocity estimate converges to the actual velocity depending on the value of K. The lower the value of K, the system is better at getting rid of noise but worse at converging. The higher the value of K, the system is faster at converging but worse at handling noise. By tuning this constant, we get a decent velocity estimate from the wheels.
 
