@@ -2,7 +2,7 @@
 layout: project
 title: "HSA"
 picture-url: "/assets/images/hsa/hsa-picture.jpg"
-type: "project"
+type: "robot"
 publish: yes
 ---
 

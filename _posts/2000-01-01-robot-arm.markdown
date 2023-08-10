@@ -2,7 +2,7 @@
 layout: project
 title: "Robot Arm"
 picture-url: "/assets/images/robotarm/robot-arm-picture.jpeg"
-type: "project"
+type: "robot"
 publish: yes
 ---
 

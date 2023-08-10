@@ -2,7 +2,7 @@
 layout: project
 title:  "PipeDream"
 picture-url: "/assets/images/pipedream/pipedream-picture.jpg"
-type: "project"
+type: "robot"
 publish: yes
 ---
 

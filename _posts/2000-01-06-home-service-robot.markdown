@@ -2,7 +2,7 @@
 layout: project
 title:  "Home Service Robot"
 picture-url: "/assets/images/home-service-robot/robot.png"
-type: "project"
+type: "robot"
 publish: yes
 ---
 

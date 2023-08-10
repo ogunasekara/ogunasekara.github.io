@@ -2,7 +2,7 @@
 layout: project
 title:  "The Atlas Project"
 picture-url: "/assets/images/atlasproject/atlas-picture.jpg"
-type: "project"
+type: "robot"
 publish: yes
 ---
 
