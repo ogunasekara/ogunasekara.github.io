@@ -1,9 +1,9 @@
 ---
 layout: project
 title:  "BentoBot"
-picture-url: "/assets/images/home-service-robot/robot.png"
+picture-url: "/assets/images/bentobot/bentobot.jpg"
 type: "robot"
-publish: 
+publish: yes
 ---
 
 <h2>Overview</h2>
@@ -30,11 +30,11 @@ Soon after determining what sensors I needed, I went to work on the electrical d
 
 After purchasing these components and other necessary electronics components (power supply, soldering iron, protoboards, etc.), I went to work with making an electrical prototype. My first prototype was to ensure that I can read raw data from the IMU and the motor encoders as well as send PWM commands to the L298N motor controller. I wrote and uploaded a C++ sketch to the Teensy 4.0 (PlatformIO is so nice for this), showing that I was able to get raw data with the wiring scheme shown below:
 
--- INSERT PICTURE OF WIRING SCHEME HERE --
+<figure><img src="{{'/assets/images/bentobot/bentobot-wiring1.jpg' | relative_url}}"></figure>
 
-Afterwards, I tested and hooked up the voltage regulators to ensure that the battery voltages (at this stage simulated by the power supply) were converted properly and adjusted to the range of voltages (11.1V - 12.6V) given by the LiPo battery in its capacity cycle. During this test, I realized that setting the motor voltage to 12V with the boost converter would result in varying input motor voltages as the battery voltage increased to it's max of 12.6V. As a result, I decided to change the voltage to 13V.
+Afterwards, I tested and hooked up the voltage regulators to ensure that the battery voltages (at this stage simulated by the power supply) were converted properly and adjusted to the range of voltages (11.1V - 12.6V) given by the LiPo battery in its capacity cycle. During this test, I realized that setting the motor voltage to 12V with the boost converter would result in varying input motor voltages as the battery voltage increased to it's max of 12.6V. As a result, I decided to change the voltage to 13V. Prior to assembly, I did an unmounted power test to ensure that the 3S LIPO could power all the components while the motors and LIDAR are active.
 
--- INSERT PICTURE OF FULL WIRING SCHEME --
+<figure><img src="{{'/assets/images/bentobot/bentobot-wiring2.jpg' | relative_url}}"></figure>
 
 <h3>IMU Calibration</h3>
 
@@ -42,27 +42,47 @@ Typically IMUs will have some offset when reading their value. In order to accou
 
 <h3>Motor Calibration</h3>
 
-The motor calibration, however is more complex. In this context, calibration is specific to my implementation of the control mechanism. I decided to utilize a Extended Kalman Filter to estimate and filter the velocity of the motor with the encoder measurements. In order to control the velocity of the motor, I utilized a PID controller with a feed-forward component to convert a desired velocity value to a PWM signal that would be sent to the motor driver. 
+The motor calibration, however is more complex. In this context, calibration is specific to my implementation of the control mechanism. I utilized an Extended Kalman Filter to estimate and filter the velocity of the motor with the rotary encoder measurements. To control the velocity of the motors, I utilized a PID controller with a feed-forward component to convert a desired velocity value to a PWM signal that would be sent to the motor driver. 
 
--- INSERT DIAGRAM OF KALMAN FILTER --
+To calibrate this controller, I wrote a Teensy sketch to read PWM signals from Serial (as well as reverse direction signals) and send them to the motor drivers. This sketch would then output the estimated velocity from the Kalman Filter to Serial. With a Python script, I looped through all possible PWM values and recorded the estimated velocities to a CSV.
 
--- INSERT DIAGRAM OF PID CONTROLLER --
-
-In order to calibrate this controller, I first wrote a Teensy sketch to read PWM signals from Serial (as well as reverse direction signals) and send them to the motor drivers. This sketch would also output the estimated velocity from the Kalman Filter to Serial. Then, I wrote a Python script to loop through all possible PWM values and record the estimated velocities to a CSV.
-
--- INSERT VIDEO OF MOTOR CALIBRATION --
+<div style="position: relative; width: 100%; padding-bottom: 75%;">
+    <iframe style="position: absolute" width="100%" height="100%" src="https://www.youtube.com/embed/PslS-kOYDyo" allowfullscreen></iframe>
+</div>
+<br>
 
 Using this data, I utilize Google Sheets to fit an exponential (the best fitting approximation) to convert velocity to PWM. As expected, the trend line was vertically reflected for negative velocities. I used this procedure to calculate an effective feed-forward component to the PID controller. To tune the other constants, I utilized the Ziegler-Nichols method for PID tuning.
 
--- INSERT PICTURE OF CSV --
+<figure><img src="{{'/assets/images/bentobot/bentobot-csv.png' | relative_url}}"></figure>
 
 <h2>Mechanical Design</h2>
 
-For the CAD, I opted to use <a href="https://www.onshape.com/en/" target="_blank">Onshape</a> as it has a feature-rich free tier and is browser based, allowing me to utilize the software without needing to install software on different computers I use for development/testing. 
+For the CAD, I opted to use <a href="https://www.onshape.com/en/" target="_blank">Onshape</a> as it has a feature-rich free tier and is browser-based, allowing me to utilize the software without needing to install software on different computers I use for development/testing/printing. 
 
+My strategy was to split the robot into different tiers, with each tier containing different components. On the first tier, I would have the motors, motor controller, IMU, and Teensy. The second layer would have the battery and power distribution boards. The third layer would contain the Jetson Nano. Finally, the top of the robot would contain the 2D LIDAR.
 
+<figure><img src="{{'/assets/images/bentobot/bentobot-chassis.jpg' | relative_url}}"></figure>
+
+Prior to designing the robot itself, I designed and 3D printed various test pieces to ensure proper fit for the brass threaded inserts, the motor mount, and sensor mounts. This allowed me to ensure that all of the sensors and actuators would be able to mount properly before I spent a long time printing out the larger piece.
+
+<figure><img src="{{'/assets/images/bentobot/bentobot-threadtest.jpg' | relative_url}}"></figure>
+
+<figure><img src="{{'/assets/images/bentobot/bentobot-wheeltest.jpg' | relative_url}}"></figure>
+
+The full CAD and the assembled robot is shown below:
+
+<figure><img src="{{'/assets/images/bentobot/bentobot-cad.png' | relative_url}}"></figure>
 
 <h2>Software Design</h2>
+
+<div style="position: relative; width: 100%; padding-bottom: 75%;">
+    <iframe style="position: absolute" width="100%" height="100%" src="https://www.youtube.com/embed/G76t6FKiV3o" allowfullscreen></iframe>
+</div>
+<br>
+
+Bentobot's software backend uses ROS Kinetic. The software portion of this project is still under development. The goal of this project is to write custom localization, mapping, and path planning packages. At the moment, I have written a dead reckoning localizer that utilizes a Kalman Filter to fuse odometry and IMU information into a more accurate localization estimate.
+
+I am currently working on the next step, designing and implementing a mapping algorithm. I am interested in pursuing a graph based solution, utilizing the 2D scans and odometry estimate from the dead reckoning localizer to build a frontend and utilizing an existing C++ graph solver library (g2o) to optimize the backend.
 
 <h2>Learn More</h2>
 
