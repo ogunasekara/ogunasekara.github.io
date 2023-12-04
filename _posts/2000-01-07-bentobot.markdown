@@ -8,7 +8,7 @@ publish: yes
 
 <h2>Overview</h2>
 
-BentoBot is two-wheel differential drive mobile robot with an autonomous sensor suite including wheel encoders, IMU, and 2D LIDAR. This robot initially started as a challenge for myself to design, build, and program a robot from the ground-up using consumer/hobby electronics parts. This involved delving into concepts which I was not intimiately familiar with, such as CAD and 3D printer manufacturing. I also aimed this project to be a way to practice and improve my C++ abilities. This project is currently ongoing, currently working on architecturing/implementing a custom simultaneous and localization package for this robot.
+BentoBot is two-wheel differential drive mobile robot with an autonomous sensor suite including wheel encoders, IMU, and 2D LIDAR. This robot initially started as a challenge for myself to design, build, and program a robot from the ground-up using consumer/hobby electronics parts. This involved delving into concepts which I was not intimately familiar with, such as CAD and 3D printer manufacturing. I also aimed this project to be a way to practice and improve my C++ abilities. This project is currently ongoing, currently working on designing/implementing a custom simultaneous and localization package for this robot.
 
 <h2>General Design</h2>
 
