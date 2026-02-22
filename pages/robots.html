@@ -3,21 +3,21 @@ layout: default
 title: Projects
 ---
 
-<main>
-    <div style="display: grid; grid-template-columns: auto;">
-        {% for post in site.posts %}
-        {% if post.publish and post.type == "robot" %}
-        <div style="padding: 10px;">
-            <h2 style="margin-top: 0">{{ post.title }}</h2>
-            <figure>
-                <a href="{{ post.url | relative_url }}">
-                    <img src="{{ post.picture-url | relative_url }}" style="height: 300px; width: 100%; object-fit: cover; box-shadow: 0 30px 40px rgba(0,0,0,.1); border-radius: 20px;"></img>
-                </a>
-                
-                <!-- <figcaption>{{ post.title }}</figcaption> -->
-            </figure>
-        </div>
-        {% endif %}
-        {% endfor %}
+<p class="section-label animate-in">// robots &amp; projects</p>
+
+<div class="project-grid">
+    {% for post in site.posts %}
+    {% if post.publish and post.type == "robot" %}
+    <div class="project-card animate-in">
+        <a href="{{ post.url | relative_url }}">
+            <div class="card-image">
+                <img src="{{ post.picture-url | relative_url }}" alt="{{ post.title }}">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">{{ post.title }}</h3>
+            </div>
+        </a>
     </div>
-</main>
+    {% endif %}
+    {% endfor %}
+</div>

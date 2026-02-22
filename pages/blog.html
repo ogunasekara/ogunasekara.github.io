@@ -1,14 +1,17 @@
 ---
 layout: default
+title: Blog
 ---
 
-<main>    
+<p class="section-label animate-in">// blog posts</p>
+
+<div class="blog-list">
     {% for post in site.posts %}
     {% if post.publish and post.type == "blog" %}
-    <div style="padding-top: 10px;">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <p style="font-weight: lighter;">{{ post.formatted-date }}</p>
+    <div class="blog-item animate-in">
+        <span class="blog-date">{{ post.formatted-date }}</span>
+        <span class="blog-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
     </div>
     {% endif %}
     {% endfor %}
-</main>
+</div>

@@ -2,22 +2,15 @@
 layout: default
 ---
 
-<main class="content" role="main">
-    <!-- Navbar spacer -->
-    <div style="height: 80px;"></div>
-    
-    <article class="post">
-        <h1 class="title">{{ page.title }}</h1>
+<main class="site-content-inner">
+    <p class="section-label">// about me</p>
 
-        <div class="columns">
-            <div class="column is-one-third">
-                <figure class="image">
-                    <img src="{{'/assets/images/about.jpg' | relative_url}}">
-                </figure>
-            </div>
-            <div class="column">
-                {{content}}
-            </div>
+    <div class="about-layout">
+        <div class="about-photo">
+            <img src="{{ '/assets/images/about.jpg' | relative_url }}" alt="Oshadha Gunasekara">
         </div>
-    </article>
+        <div class="about-text">
+            {{ content }}
+        </div>
+    </div>
 </main>
