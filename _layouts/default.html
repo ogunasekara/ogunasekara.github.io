@@ -330,6 +330,7 @@
 
         .project-card .card-image {
             overflow: hidden;
+            clip-path: inset(0);
             aspect-ratio: 16 / 10;
             border-bottom: 1px solid var(--border);
         }
@@ -339,6 +340,8 @@
             height: 100%;
             object-fit: cover;
             border-radius: 0;
+            transform: scale(1.001);
+            will-change: transform;
             transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
@@ -499,7 +502,7 @@
         /* ===== ANIMATIONS ===== */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+            to { opacity: 1; transform: none; }
         }
 
         @keyframes blink {
@@ -508,7 +511,7 @@
         }
 
         .animate-in {
-            animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+            animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
         }
 
         .animate-in:nth-child(1) { animation-delay: 0.03s; }
