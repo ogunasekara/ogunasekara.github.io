@@ -121,6 +121,13 @@
             animation: blink 1s steps(1) infinite;
         }
 
+        /* No hover on touch/tablet/mobile, so blink by default */
+        @media (hover: none), (max-width: 1024px) {
+            .nav-logo::after {
+                animation: blink 1s steps(1) infinite;
+            }
+        }
+
         .nav-links {
             display: flex;
             list-style: none;
