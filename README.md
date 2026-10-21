@@ -7,12 +7,13 @@ This is my personal portfolio website. It is built using Jekyll (Ruby) and was i
 ### Prerequisites
 
 - [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
-- [Jekyll](https://jekyllrb.com/docs/installation/)
+- [Bundler](https://bundler.io/) (`gem install bundler`)
 
 ### Running locally
 
 ```bash
-jekyll serve
+bundle install
+bundle exec jekyll serve
 ```
 
 The site will be available at `http://localhost:4444`.
@@ -20,7 +21,7 @@ The site will be available at `http://localhost:4444`.
 To access the site from other devices on the same network:
 
 ```bash
-jekyll serve --host 0.0.0.0
+bundle exec jekyll serve --host 0.0.0.0
 ```
 
 Then visit `http://<your-local-ip>:4444` from the other device.
