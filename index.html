@@ -4,37 +4,15 @@ title: Home
 home_page: true
 ---
 
-<div style="margin-bottom: 3rem;" class="animate-in">
-    <p class="section-label">// welcome</p>
-</div>
+<p class="section-label animate-in">// welcome</p>
 
-<div style="display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; align-items: center; margin-bottom: 3rem;" class="animate-in">
+<div class="hero animate-in">
+    <img src="{{ '/assets/images/about.jpg' | relative_url }}" alt="Oshadha Gunasekara">
     <div>
-        <img
-            src="{{ '/assets/images/about.jpg' | relative_url }}"
-            alt="Oshadha Gunasekara"
-            style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 2px solid var(--border); box-shadow: 0 0 40px var(--cyan-glow);"
-        >
-    </div>
-    <div>
-        <h1 style="margin-bottom: 0.25rem;">
-            Hey, I'm Oshadha<span style="color: var(--cyan);">!</span>
-        </h1>
-        <p style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">
-            Developer<span style="color: var(--cyan);"> / </span>Roboticist<span style="color: var(--cyan);"> / </span>Hacker
-        </p>
+        <h1>Hey, I'm Oshadha</h1>
+        <p class="tagline">Developer<span class="sep">/</span>Roboticist<span class="sep">/</span>Hacker</p>
     </div>
 </div>
-
-<style>
-    @media (max-width: 600px) {
-        div[style*="grid-template-columns: 180px"] {
-            grid-template-columns: 1fr !important;
-            justify-items: center;
-            text-align: center;
-        }
-    }
-</style>
 
 <div class="animate-in" style="animation-delay: 0.15s;">
     <p>
