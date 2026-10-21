@@ -427,8 +427,10 @@
         /* ===== HOME HERO ===== */
         .hero {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 2rem;
+            text-align: center;
+            gap: 1.5rem;
             margin-bottom: 3rem;
         }
 
@@ -453,11 +455,7 @@
         .hero .tagline .sep { color: var(--border-hover); margin: 0 0.4rem; }
 
         @media (max-width: 600px) {
-            .hero {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1.25rem;
-            }
+            .hero { gap: 1.25rem; }
             .hero img { width: 96px; height: 96px; }
         }
 
