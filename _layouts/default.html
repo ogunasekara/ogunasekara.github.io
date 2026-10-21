@@ -272,6 +272,20 @@
             border-radius: var(--radius);
         }
 
+        /* Hide alt text while an image is loading; fade in once ready */
+        img {
+            color: transparent;
+        }
+
+        img.img-fade {
+            opacity: 0;
+        }
+
+        img.img-fade.img-loaded {
+            opacity: 1;
+            transition: opacity 0.4s ease;
+        }
+
         figure {
             margin: 0 0 1.5rem;
         }
@@ -344,6 +358,7 @@
             overflow: hidden;
             clip-path: inset(0);
             aspect-ratio: 16 / 10;
+            background: var(--border);
             border-bottom: 1px solid var(--border);
         }
 
@@ -354,7 +369,7 @@
             border-radius: 0;
             transform: scale(1.001);
             will-change: transform;
-            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
         }
 
         .project-card:hover .card-image img {
@@ -640,5 +655,15 @@
     <!-- Highlight.js -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script>
+        // Fade images in as they finish loading instead of showing alt text/blank space
+        document.querySelectorAll('img').forEach(function (img) {
+            if (img.complete) return;
+            img.classList.add('img-fade');
+            var show = function () { img.classList.add('img-loaded'); };
+            img.addEventListener('load', show);
+            img.addEventListener('error', show);
+        });
+    </script>
 </body>
 </html>
