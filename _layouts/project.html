@@ -4,6 +4,8 @@ disqus: false
 archive: false
 ---
 
+{% include post-font.html %}
+
 <main class="site-content-inner">
     <p class="section-label">// project</p>
 
@@ -13,5 +15,7 @@ archive: false
         <img src="{{ page.picture-url | relative_url }}" class="project-detail-img" alt="{{ page.title }}">
     </figure>
 
-    {{ content }}
+    <div class="post-body">
+        {{ content }}
+    </div>
 </main>
