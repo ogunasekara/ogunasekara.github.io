@@ -3,6 +3,8 @@ layout: project
 title:  "The Atlas Project"
 picture-url: "/assets/images/atlasproject/atlas-picture.jpg"
 type: "robot"
+timeframe: "2016 – 2020"
+order: 5
 publish: yes
 ---
 

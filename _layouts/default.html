@@ -392,6 +392,23 @@
             margin: 0;
         }
 
+        .project-card .card-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .project-card .card-timeframe,
+        .project-timeframe {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .project-timeframe {
+            margin: 0.4rem 0 1.5rem;
+        }
+
         .project-card .card-body::after {
             content: '\2192';
             color: var(--text-muted);

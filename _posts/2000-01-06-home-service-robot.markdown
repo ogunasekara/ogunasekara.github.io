@@ -3,6 +3,8 @@ layout: project
 title:  "Home Service Robot"
 picture-url: "/assets/images/home-service-robot/robot.png"
 type: "robot"
+timeframe: "2023"
+order: 6
 publish: yes
 ---
 

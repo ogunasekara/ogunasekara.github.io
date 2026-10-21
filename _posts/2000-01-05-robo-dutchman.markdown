@@ -3,6 +3,8 @@ layout: project
 title:  "RoboDutchman"
 picture-url: "/assets/images/robodutchman/robodutchman-picture.jpg"
 type: "robot"
+timeframe: "2020"
+order: 4
 publish: yes
 ---
 

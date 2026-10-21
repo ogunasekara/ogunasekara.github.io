@@ -11,6 +11,8 @@ archive: false
 
     <h1 style="margin-top: 0;">{{ page.title }}</h1>
 
+    {% if page.timeframe %}<p class="project-timeframe">{{ page.timeframe }}</p>{% endif %}
+
     <figure>
         <img src="{{ page.picture-url | relative_url }}" class="project-detail-img" alt="{{ page.title }}">
     </figure>

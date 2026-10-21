@@ -3,6 +3,8 @@ layout: project
 title:  "BentoBot"
 picture-url: "/assets/images/bentobot/bentobot.jpg"
 type: "robot"
+timeframe: "2023 – Present"
+order: 7
 publish: yes
 ---
 

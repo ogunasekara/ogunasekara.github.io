@@ -6,7 +6,8 @@ title: Projects
 <p class="section-label animate-in">// robots &amp; projects</p>
 
 <div class="project-grid">
-    {% for post in site.posts %}
+    {% assign sorted_posts = site.posts | sort: "order" | reverse %}
+    {% for post in sorted_posts %}
     {% if post.publish and post.type == "robot" %}
     <div class="project-card animate-in">
         <a href="{{ post.url | relative_url }}">
@@ -14,7 +15,10 @@ title: Projects
                 <img src="{{ post.picture-url | relative_url }}" alt="{{ post.title }}" loading="lazy" decoding="async">
             </div>
             <div class="card-body">
-                <h3 class="card-title">{{ post.title }}</h3>
+                <div class="card-text">
+                    <h3 class="card-title">{{ post.title }}</h3>
+                    {% if post.timeframe %}<span class="card-timeframe">{{ post.timeframe }}</span>{% endif %}
+                </div>
             </div>
         </a>
     </div>

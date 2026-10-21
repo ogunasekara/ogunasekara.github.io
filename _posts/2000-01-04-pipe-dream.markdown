@@ -3,6 +3,8 @@ layout: project
 title:  "PipeDream"
 picture-url: "/assets/images/pipedream/pipedream-picture.jpg"
 type: "robot"
+timeframe: "2017"
+order: 2
 publish: yes
 ---
 
